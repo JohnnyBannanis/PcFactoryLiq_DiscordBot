@@ -7,7 +7,7 @@ module.exports = {
 		.setName('suscribe')
 		.setDescription('Te suscribe a la lista de notificaiones'),
 	async execute(interaction) {
-		await interaction.reply("Suscribiendo...");
+		await interaction.reply({ content: "Suscribiendo...", ephemeral: true });
 		const usersId = fs.readFileSync('data/suscribed.json');
 		const parsed = JSON.parse(usersId);
 		parsed.push(interaction.user.id);

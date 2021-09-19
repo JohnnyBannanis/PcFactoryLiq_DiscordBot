@@ -23,6 +23,6 @@ module.exports = {
 					.addOptions(optionList),
 			);
 
-		await interaction.reply({content: "Aquí las tienes :3", components: [selector] });
+		await interaction.reply({content: "Aquí las tienes :3", components: [selector], ephemeral:true});
 	},
 };

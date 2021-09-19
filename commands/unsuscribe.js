@@ -7,7 +7,7 @@ module.exports = {
 		.setName('unsuscribe')
 		.setDescription('Te elimina de la lista de notificaiones'),
 	async execute(interaction) {
-		await interaction.reply("Desuscribiendo...");
+		await interaction.reply({ content: "Desuscribiendo...", ephemeral: true });
 		const usersId = fs.readFileSync('data/suscribed.json');
 		const parsed = JSON.parse(usersId);
 		parsed.splice(parsed.indexOf(interaction.user.id),1);
