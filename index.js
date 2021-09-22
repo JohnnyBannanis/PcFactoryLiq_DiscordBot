@@ -24,7 +24,7 @@ for (const file of commandFiles) {
 // When the client is ready, run this code (only once)
 client.once("ready", () => {
   console.log("Ready!");
-  setInterval(fetchSuscribed, 30000);
+  setInterval(fetchSuscribed, 70000);
 });
 
 // Waiting for commands
